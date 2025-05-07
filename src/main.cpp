@@ -1,21 +1,15 @@
-#include <SFML/Graphics.hpp>
+#include <iostream>
+#include "../algorithms/QuickSort.h"
 
-int main()
-{
-    auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
-    window.setFramerateLimit(144);
+int main() {
+    int arr[] = {9, 3, 7, 5, 6, 4, 8, 2, 5, 78, 4, 1};
+    int size = 11;
 
-    while (window.isOpen())
-    {
-        while (const std::optional event = window.pollEvent())
-        {
-            if (event->is<sf::Event::Closed>())
-            {
-                window.close();
-            }
-        }
+    quickSort(arr, 0, size - 1);
 
-        window.clear();
-        window.display();
-    }
+    for (int i = 0; i < size; ++i)
+        std::cout << arr[i] << ' ';
+    std::cout << '\n';
+
+    return 0;
 }
