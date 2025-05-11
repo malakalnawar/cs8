@@ -23,6 +23,7 @@ class Heap {
 
 public:
 
+    Heap();
     Heap(std::initializer_list<T> list);
 
     void push(T data);
@@ -31,6 +32,7 @@ public:
     bool empty() const;
     int size() const;
     void print() const;
+    void clear();
 
 };
 

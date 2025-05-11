@@ -73,11 +73,11 @@ bool Backtracker::recursiveSolve(Model::NodesToCheckIterator it, Model* m) {
             m->placeFlags(combination);
             m->logStep(node.getPos(), combination, true); // log step to place flags
 
-            if (validate(m)) {
+            // if (validate(m)) {
                 auto next = it;
                 ++next;
                 if (recursiveSolve(next, m)) return true;
-            }
+            // }
 
             m->removeFlags(combination);
             m->logStep(node.getPos(), combination, false); // log step to remove flags

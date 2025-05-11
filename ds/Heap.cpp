@@ -8,6 +8,12 @@
 #include "Heap.h"
 
 template<typename T>
+Heap<T>::Heap() {
+
+}
+
+
+template<typename T>
 Heap<T>::Heap(std::initializer_list<T> list) {
     for (auto t : list) {
         push(t);
@@ -100,6 +106,11 @@ void Heap<T>::print() const {
         std::cout << t << " ";
     }
     std::cout << std::endl;
+}
+
+template<typename T>
+void Heap<T>::clear() {
+    heap.clear();
 }
 
 #endif //HEAP_CPP

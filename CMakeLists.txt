@@ -25,6 +25,20 @@ add_executable(cs8-new
         algorithms/MergeSort.h
         algorithms/QuickSort.cpp
         algorithms/QuickSort.h
+        algorithms/Dijkstra.cpp
+        algorithms/Dijkstra.h
+        ds/WeightedGraph.cpp
+        ds/WeightedGraph.h
+        projects/autocorrect/AutoCorrectApp.cpp
+        projects/autocorrect/AutoCorrectApp.h
+        projects/autocorrect/TextBox.cpp
+        projects/autocorrect/TextBox.h
+        projects/autocorrect/Word.cpp
+        projects/autocorrect/Word.h
+        projects/autocorrect/FileReader.cpp
+        projects/autocorrect/FileReader.h
+        projects/autocorrect/WordSort.cpp
+        projects/autocorrect/WordSort.h
 )
 
 target_link_libraries(cs8-new PRIVATE Malena::Malena)
