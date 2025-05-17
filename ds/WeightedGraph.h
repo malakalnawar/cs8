@@ -8,7 +8,8 @@
 
 class WeightedGraph {
 
-    struct vertex;
+public:
+
     struct edge {
         int weight;
         int next;
@@ -21,16 +22,12 @@ class WeightedGraph {
         }
     };
 
-    int vertexCount = 0;
-
-    public:
-
     WeightedGraph();
 
     void addVertex();
     void addEdge(int from, int to, int weight);
 
-    std::set<vertex> vertices;
+    std::vector<vertex> vertices;
 
 };
 

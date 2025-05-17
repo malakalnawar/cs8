@@ -5,7 +5,7 @@ include(FetchContent)
 FetchContent_Declare(
         malena
         GIT_REPOSITORY https://github.com/daversmith/Malena.git
-        GIT_TAG v0.2.4
+        GIT_TAG v0.2.5
 )
 FetchContent_MakeAvailable(malena)
 

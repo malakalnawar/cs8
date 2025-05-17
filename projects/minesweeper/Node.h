@@ -64,6 +64,9 @@ public:
     void printCombinations(); // print flag combinations
     void printSurroundings(); // print surrounding nodes
 
+    size_t numCombinations() const;
+    const std::vector<coordinates>& getCombination(size_t index) const;
+
     // iterator for combinations
     class Iterator {
         std::vector<coordinates>* it;

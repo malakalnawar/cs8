@@ -123,3 +123,13 @@ void Node::printSurroundings() {
     }
     std::cout << "\n";
 }
+
+// Returns the number of flag combinations
+size_t Node::numCombinations() const {
+    return combinations.size();
+}
+
+// Returns the flag combination at the given index
+const std::vector<coordinates>& Node::getCombination(size_t index) const {
+    return combinations[index];
+}

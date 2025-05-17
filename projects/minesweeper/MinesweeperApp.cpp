@@ -5,6 +5,7 @@
 #include "minesweeperApp.h"
 #include "Model.h"
 #include "Malena/Utilities/TextureSlicer.h"
+#include <future>
 
 MinesweeperApp::MinesweeperApp(int c, int r, int b)
     : Application(1024, 1024, 32, "minesweeper - Backtracking"),
@@ -104,9 +105,13 @@ void MinesweeperApp::registerEvents()
     }
 
     backtracker.flagButton.onClick([this] {
-        if (backtracker.solve()) {
-            std::cout << "solved" << std::endl;
-        }
+
+        std::thread([this] {
+            if (backtracker.solve()) {
+                std::cout << "solved" << std::endl;
+            }
+        }).detach();
+
     });
 
     // timer
