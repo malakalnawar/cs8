@@ -20,7 +20,6 @@ class Backtracker {
     Model* board = nullptr;
     void setModel(Model* model);
     bool recursiveSolve(Model::NodesToCheckIterator it, Model* m);
-    bool iterativeSolve(Model::NodesToCheckIterator it, Model* m);
     bool validate(Model* m) const;
     bool isSolved(Model* m) const;
 

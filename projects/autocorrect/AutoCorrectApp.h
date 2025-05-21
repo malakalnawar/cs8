@@ -6,6 +6,7 @@
 #define AUTOCORRECTAPP_H
 #include <Malena/Application/Application.h>
 
+#include "SMValidator.h"
 #include "TextBox.h"
 #include "WordSort.h"
 
@@ -14,6 +15,7 @@ class AutoCorrectApp : public ml::Application
 {
     TextBox textBox;
     WordSort autocorrect;
+    SMValidator validator;
 
 public:
     AutoCorrectApp();

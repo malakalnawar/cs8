@@ -4,7 +4,7 @@
 
 #ifndef WEIGHTEDGRAPH_H
 #define WEIGHTEDGRAPH_H
-#include <set>
+#include <vector>
 
 class WeightedGraph {
 

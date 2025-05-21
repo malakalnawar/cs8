@@ -87,12 +87,6 @@ bool Backtracker::recursiveSolve(Model::NodesToCheckIterator it, Model* m) {
     return false;
 }
 
-
-
-bool Backtracker::iterativeSolve(Model::NodesToCheckIterator it, Model* m) {
-    return false;
-}
-
 void Backtracker::takeAStep() {
 
     std::deque<step>& steps = board->getSteps();

@@ -18,6 +18,7 @@ TextBox::TextBox() {
 
     // Initialize typer
     typer.setCharacterSize(26);
+    typer.setFillColor({255,255,255});
 
 
 
@@ -45,7 +46,6 @@ TextBox::TextBox() {
     onFocus([this] () {
         setOutlineColor({119,182,234});
         cursor.setFillColor({119,182,234});
-        typer.setFillColor({119,182,234});
 
         typer.enableState(ENABLED);
 

@@ -6,7 +6,8 @@
 
 AutoCorrectApp::AutoCorrectApp()
     : Application(720, 720, 32, "AutoCorrect"),
-    autocorrect("/Users/elijahghossein/Documents/GitHub/cs8-new/projects/autocorrect/5000-baby-girl-names.txt", &textBox)
+    autocorrect("/Users/elijahghossein/Documents/GitHub/cs8-new/projects/autocorrect/5000-baby-girl-names.txt", &textBox),
+    validator("/Users/elijahghossein/Documents/GitHub/cs8-new/projects/autocorrect/reserved-keywords.txt", &textBox)
 {
 
 }
@@ -26,12 +27,24 @@ void AutoCorrectApp::initialization() {
         addComponent(autocorrect.suggestions[i]);
     }
 
+
+
 }
 
 void AutoCorrectApp::registerEvents() {
 
     textBox.typer.onKeypress([this]() {
         autocorrect.autocorrect();
+        if (validator.isValidIdentifier()) {
+            textBox.typer.setFillColor({0,255,0});
+            const std::string query = textBox.typer.getString();
+            std::cout << query << std::endl;
+        } else {
+            textBox.typer.setFillColor({255,0,0});
+            const std::string query = textBox.typer.getString();
+            std::cout << query << std::endl;
+        }
     });
+
 
 }

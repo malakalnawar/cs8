@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(cs8-new)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -39,6 +41,12 @@ add_executable(cs8-new
         projects/autocorrect/FileReader.h
         projects/autocorrect/WordSort.cpp
         projects/autocorrect/WordSort.h
+        projects/autocorrect/SMValidator.cpp
+        projects/autocorrect/SMValidator.h
+        ds/StateMachine.cpp
+        ds/StateMachine.h
+        ds/SMNode.cpp
+        ds/SMNode.h
 )
 
 target_link_libraries(cs8-new PRIVATE Malena::Malena)
