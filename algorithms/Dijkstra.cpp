@@ -4,6 +4,7 @@
 
 #include "Dijkstra.h"
 
+#include <limits>
 #include <queue>
 
 std::vector<int> shortestPath(WeightedGraph graph, int start) {

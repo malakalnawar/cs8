@@ -3,6 +3,7 @@
 //
 
 #include "WordSort.h"
+#include <algorithm>
 
 WordSort::WordSort(const std::string &filename, TextBox *textBox)
     : reader(filename), textBox(textBox)

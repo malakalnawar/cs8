@@ -40,6 +40,9 @@ class MinesweeperApp : public ml::Application
 
     int frames = 0;
 
+    sf::Clock flagButtonInteractionClock;
+    const sf::Time clickDebounceTime = sf::milliseconds(200);
+
 public:
 
     MinesweeperApp(int c, int r, int b);
