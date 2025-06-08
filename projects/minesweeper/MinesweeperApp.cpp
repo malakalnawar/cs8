@@ -9,10 +9,11 @@
 #include <atomic>
 
 MinesweeperApp::MinesweeperApp(int c, int r, int b)
-    : Application(1024, 1024, 32, "minesweeper - Backtracking"),
+    : Application(720, 720, 32, "minesweeper - Backtracking"),
       board(c, r, b),
       backtracker(&board)
 {
+
 }
 
 void MinesweeperApp::initialization()

@@ -53,6 +53,18 @@ add_executable(cs8-new
         ds/StateMachine.h
         ds/SMNode.cpp
         ds/SMNode.h
+        projects/slidingPuzzle/slidingPuzzleApp.cpp
+        projects/slidingPuzzle/slidingPuzzleApp.h
+        projects/slidingPuzzle/Board.cpp
+        projects/slidingPuzzle/Board.h
+        projects/slidingPuzzle/Tile.cpp
+        projects/slidingPuzzle/Tile.h
+        projects/slidingPuzzle/BoardController.cpp
+        projects/slidingPuzzle/BoardController.h
+        algorithms/AStar.cpp
+        algorithms/AStar.h
+        projects/gameLauncher/GameLauncher.cpp
+        projects/gameLauncher/GameLauncher.h
 )
 
 target_link_libraries(cs8-new PRIVATE Malena::Malena)

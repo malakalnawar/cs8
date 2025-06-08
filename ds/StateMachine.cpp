@@ -6,22 +6,22 @@
 
 StateMachine::StateMachine() : start(new SMNode), validate(new SMNode) {
 
-    for (int i = 48; i <= 57; i++) {
+    for (int i = 48; i <= 57; i++) { // 0 - 9
         char c = static_cast<char>(i);
         start->addEdge(c, validate);
         validate->addEdge(c, validate);
     }
-    for (int i = 65; i <= 90; i++) {
+    for (int i = 65; i <= 90; i++) { // A - Z
         char c = static_cast<char>(i);
         start->addEdge(c, validate);
         validate->addEdge(c, validate);
     }
-    for (int i = 97; i <= 122; i++) {
+    for (int i = 97; i <= 122; i++) { // a - z
         char c = static_cast<char>(i);
         start->addEdge(c, validate);
         validate->addEdge(c, validate);
     }
-    char c = 95;
+    char c = 95; // _
     start->addEdge(c, validate);
     validate->addEdge(c, validate);
 }

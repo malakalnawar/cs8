@@ -13,11 +13,13 @@
 
 class AutoCorrectApp : public ml::Application
 {
+
+public:
+
     TextBox textBox;
     WordSort autocorrect;
     SMValidator validator;
 
-public:
     AutoCorrectApp();
 
     void initialization() override;
